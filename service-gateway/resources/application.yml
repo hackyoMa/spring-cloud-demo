@@ -1,0 +1,15 @@
+server:
+  port: 8884
+  shutdown: graceful
+spring:
+  application:
+    name: service-gateway
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      config:
+        format: YAML
+        data-key: dev
+  config:
+    import: optional:consul:${spring.cloud.consul.host}:${spring.cloud.consul.port}
