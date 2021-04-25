@@ -10,6 +10,6 @@ spring:
       port: 8500
       config:
         format: YAML
-        data-key: dev
+        data-key: data
   config:
     import: optional:consul:${spring.cloud.consul.host}:${spring.cloud.consul.port}

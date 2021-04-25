@@ -2,11 +2,11 @@
 
 ## 组件
 
-基于Spring Boot 2.4.4和Spring Cloud 2020.0.2的Spring Cloud Demo，其中含有下列组件的样例：
+基于Spring Boot 2.4.5和Spring Cloud 2020.0.2的Spring Cloud Demo，其中含有下列组件的样例：
 > * Consul（自行安装，注册中心、配置中心）
 > > * docker run -d -p 8500:8500 --name=consul -e CONSUL_BIND_INTERFACE=eth0 consul
 > * Zipkin（自行安装，服务链路追踪）
-> > * docker run -d -p 9411:9411 openzipkin/zipkin
+> > * docker run -d -p 9411:9411 --name=zipkin openzipkin/zipkin
 > * RestTemplate（服务消费者）
 > * Spring Cloud Gateway（路由网关）
 > * Spring Boot Admin（服务监控中心）
@@ -39,6 +39,6 @@
 ## 配置中心配置地址
 
 指的是各服务在Consul中Key/Value的Key值，配置示例在template.yml和project/resources/template.yml中
-> * application（全局配置）：config/application/dev
-> * service-admin：config/service-admin/dev
-> * service-gateway：config/service-gateway/dev
+> * application（全局配置）：config/application/data
+> * service-admin：config/service-admin/data
+> * service-gateway：config/service-gateway/data
