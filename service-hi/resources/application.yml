@@ -1,5 +1,5 @@
 server:
-  port: 8881
+  port: 18881
   shutdown: graceful
 spring:
   application:
@@ -11,5 +11,8 @@ spring:
       config:
         format: YAML
         data-key: data
+    sentinel:
+      transport:
+        port: 19881
   config:
     import: optional:consul:${spring.cloud.consul.host}:${spring.cloud.consul.port}

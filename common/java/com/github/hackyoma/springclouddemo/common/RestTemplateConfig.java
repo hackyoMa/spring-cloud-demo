@@ -1,5 +1,6 @@
 package com.github.hackyoma.springclouddemo.common;
 
+import com.alibaba.cloud.sentinel.annotation.SentinelRestTemplate;
 import okhttp3.OkHttpClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -22,6 +23,7 @@ public class RestTemplateConfig {
 
     @Bean
     @LoadBalanced
+    @SentinelRestTemplate
     public RestTemplate getRestTemplate(@Autowired RestTemplateBuilder restTemplateBuilder) {
         OkHttpClient client = new OkHttpClient().newBuilder()
                 .connectTimeout(30, TimeUnit.SECONDS)

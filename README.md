@@ -7,6 +7,8 @@
 > > * docker run -d -p 8500:8500 --name=consul -e CONSUL_BIND_INTERFACE=eth0 consul
 > * Zipkin（自行安装，服务链路追踪）
 > > * docker run -d -p 9411:9411 --name=zipkin openzipkin/zipkin
+> * Sentinel（自行安装，流量防卫）
+> > * docker run -d -p 8080:8080 --name sentinel hackyo/sentinel:1.8.1
 > * RestTemplate（服务消费者）
 > * Spring Cloud Gateway（路由网关）
 > * Spring Boot Admin（服务监控中心）
@@ -18,6 +20,7 @@
 > * 外部或内部非Spring Cloud项目统一通过API网关（Spring Cloud Gateway）来访问内部服务
 > * 网关接收到请求后，从注册中心（Consul）获取可用服务
 > * RestTemplate进行负载均衡后，分发到具体实例
+> * 所有流量均使用Sentinel进行控制
 > * 微服务之间通过RestTemplate进行通信
 > * Consul对服务配置进行统一管理
 > * Spring Cloud Sleuth监控服务的使用信息
@@ -28,11 +31,12 @@
 
 ## 相关地址
 
-> * 直接消费服务：http://localhost:8881/hi?name=666
-> * 通过RestTemplate消费服务：http://localhost:8883/hi?name=666
-> * 通过Spring Cloud Gateway消费：http://localhost:8884/service-hi/hi?name=666
+> * 直接消费服务：http://localhost:18881/hi?name=666
+> * 通过RestTemplate消费服务：http://localhost:18883/hi?name=666
+> * 通过Spring Cloud Gateway消费：http://localhost:18884/service-hi/hi?name=666
 > * Zipkin信息地址：http://localhost:9411/zipkin
-> * Spring Boot Admin服务地址：http://localhost:8885
+> * Spring Boot Admin服务地址：http://localhost:18885
+> * Sentinel控制台：http://localhost:8080
 
 ------
 
