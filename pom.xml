@@ -7,12 +7,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.5</version>
+        <version>2.4.6</version>
         <relativePath/>
     </parent>
 
-    <groupId>com.github.hackyoma</groupId>
-    <artifactId>spring-cloud-demo</artifactId>
+    <groupId>io.github.hackyoma</groupId>
+    <artifactId>spring-cloud-demo-parent</artifactId>
     <version>1.0.0</version>
     <name>spring-cloud-demo</name>
     <description>Spring Cloud Demo</description>
@@ -107,20 +107,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <sourceDirectory>java</sourceDirectory>
-        <resources>
-            <resource>
-                <directory>resources</directory>
-            </resource>
-        </resources>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

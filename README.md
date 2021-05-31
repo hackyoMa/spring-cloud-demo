@@ -6,7 +6,7 @@
 > * Consul（自行安装，注册中心、配置中心）
 > > * docker run -d -p 8500:8500 --name=consul -e CONSUL_BIND_INTERFACE=eth0 consul:1.9
 > * Zipkin（自行安装，服务链路追踪）
-> > * docker run -d -p 9411:9411 --name=zipkin openzipkin/zipkin:2
+> > * docker run -d -p 9411:9411 --name=zipkin hackyo/zipkin:2
 > * Sentinel（自行安装，流量防卫）
 > > * docker run -d -p 8080:8080 --name sentinel hackyo/sentinel:1.8
 > * RestTemplate（服务消费者）
