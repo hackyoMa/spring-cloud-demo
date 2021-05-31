@@ -37,6 +37,7 @@
 > * Zipkin信息地址：http://localhost:9411/zipkin
 > * Spring Boot Admin服务地址：http://localhost:18885
 > * Sentinel控制台：http://localhost:9500
+> * Swagger UI：http://localhost:18884/swagger-ui/index.html
 
 ------
 
