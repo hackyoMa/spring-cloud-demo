@@ -4,11 +4,11 @@
 
 基于Spring Boot 2.4.5和Spring Cloud 2020.0.2的Spring Cloud Demo，其中含有下列组件的样例：
 > * Consul（自行安装，注册中心、配置中心）
-> > * docker run -d -p 8500:8500 --name=consul -e CONSUL_BIND_INTERFACE=eth0 consul:1.9
+> > * docker run -d -p 8500:8500 -v $PWD/data/:/consul/data/ -e CONSUL_BIND_INTERFACE=eth0 --name=consul consul:1.9.5
 > * Zipkin（自行安装，服务链路追踪）
 > > * docker run -d -p 9411:9411 --name=zipkin hackyo/zipkin:2
 > * Sentinel（自行安装，流量防卫）
-> > * docker run -d -p 8080:8080 --name sentinel hackyo/sentinel:1.8
+> > * docker run -d -p 9500:8080 --name sentinel hackyo/sentinel:1.8
 > * RestTemplate（服务消费者）
 > * Spring Cloud Gateway（路由网关）
 > * Spring Boot Admin（服务监控中心）
@@ -36,7 +36,7 @@
 > * 通过Spring Cloud Gateway消费：http://localhost:18884/service-hi/hi?name=666
 > * Zipkin信息地址：http://localhost:9411/zipkin
 > * Spring Boot Admin服务地址：http://localhost:18885
-> * Sentinel控制台：http://localhost:8080
+> * Sentinel控制台：http://localhost:9500
 
 ------
 

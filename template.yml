@@ -5,7 +5,7 @@ spring:
   cloud:
     sentinel:
       transport:
-        dashboard: localhost:8080
+        dashboard: localhost:9500
   zipkin:
     base-url: http://localhost:9411
 management:

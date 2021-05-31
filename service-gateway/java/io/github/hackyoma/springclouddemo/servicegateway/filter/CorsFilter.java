@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * CorsFilter
  *
- * @author 马昊宇
+ * @author hackyo
  * @version 2020/7/24
  */
 @Component

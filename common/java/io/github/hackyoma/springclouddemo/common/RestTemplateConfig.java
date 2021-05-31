@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * RestTemplateConfig
  *
- * @author 马昊宇
+ * @author hackyo
  * @version 2021/2/5
  */
 @Component
