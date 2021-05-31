@@ -26,6 +26,7 @@
 > * Spring Cloud Sleuth监控服务的使用信息
 > * Zipkin监控服务间的调用信息
 > * Spring Boot Admin监控服务的运行状态和属性等相关信息
+> * 在网关处聚合所有服务的Swagger
 
 ------
 
