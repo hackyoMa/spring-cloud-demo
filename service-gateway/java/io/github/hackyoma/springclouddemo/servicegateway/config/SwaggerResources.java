@@ -18,8 +18,8 @@ import java.util.*;
 @Component
 public class SwaggerResources implements SwaggerResourcesProvider {
 
-    private final Set<String> excludeServices;
     private final RouteLocator routeLocator;
+    private final Set<String> excludeServices;
 
     @Autowired
     public SwaggerResources(RouteLocator routeLocator,
