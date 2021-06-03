@@ -44,7 +44,7 @@
 
 ## 配置中心配置地址
 
-指的是各服务在Consul中Key/Value的Key值，配置示例在template.yml和project/resources/template.yml中
+指的是各服务在Consul中Key/Value的Key值，配置示例在config.yml和project/resources/config.yml中
 > * application（全局配置）：config/application/data
 > * service-admin：config/service-admin/data
 > * service-gateway：config/service-gateway/data

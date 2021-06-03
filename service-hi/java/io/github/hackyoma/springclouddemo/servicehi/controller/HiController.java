@@ -2,7 +2,6 @@ package io.github.hackyoma.springclouddemo.servicehi.controller;
 
 import io.github.hackyoma.springclouddemo.servicehi.service.HiService;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,7 +26,6 @@ public class HiController {
     }
 
     @ApiOperation("测试接口")
-    @ApiImplicitParam(name = "name", value = "测试参数")
     @GetMapping("/hi")
     public String hi(@RequestParam("name") String name) {
         return hiService.hi(name);
