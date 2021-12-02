@@ -34,7 +34,7 @@
 
 > * 直接消费服务：http://localhost:18881/hi?name=666
 > * 通过RestTemplate消费服务：http://localhost:18883/hi?name=666
-> * 通过Spring Cloud Gateway消费：http://localhost:18884/service-hi/hi?name=666
+> * 通过Spring Cloud Gateway消费：http://localhost:18884/hi-service/hi?name=666
 > * Zipkin信息地址：http://localhost:9411/zipkin
 > * Spring Boot Admin服务地址：http://localhost:18885
 > * Sentinel控制台（需要调用相关接口后才能在控制台看到数据）：http://localhost:9500
@@ -46,5 +46,5 @@
 
 指的是各服务在Consul中Key/Value的Key值，配置示例在config.yml和project/resources/config.yml中
 > * application（全局配置）：config/application/data
-> * service-admin：config/service-admin/data
-> * service-gateway：config/service-gateway/data
+> * admin-service：config/admin-service/data
+> * gateway-service：config/gateway-service/data
