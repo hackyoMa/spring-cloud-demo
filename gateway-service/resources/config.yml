@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    sentinel:
+      filter:
+        enabled: false
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+swagger:
+  exclude-services: consul, admin-service

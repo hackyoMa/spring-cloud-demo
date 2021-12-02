@@ -1,0 +1,18 @@
+server:
+  port: 18885
+  shutdown: graceful
+spring:
+  application:
+    name: admin-service
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      config:
+        format: YAML
+        data-key: data
+    sentinel:
+      transport:
+        port: 19885
+  config:
+    import: optional:consul:${spring.cloud.consul.host}:${spring.cloud.consul.port}

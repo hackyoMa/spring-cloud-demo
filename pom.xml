@@ -25,17 +25,17 @@
         <java.version>17</java.version>
         <spring-cloud.version>2020.0.4</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
-        <spring-boot-admin.version>2.5.1</spring-boot-admin.version>
-        <okhttp.version>4.9.1</okhttp.version>
+        <spring-boot-admin.version>2.5.2</spring-boot-admin.version>
+        <okhttp.version>4.9.2</okhttp.version>
         <swagger.version>3.0.0</swagger.version>
     </properties>
 
     <modules>
         <module>common</module>
-        <module>service-hi</module>
-        <module>service-consumer</module>
-        <module>service-gateway</module>
-        <module>service-admin</module>
+        <module>hi-service</module>
+        <module>consumer-service</module>
+        <module>gateway-service</module>
+        <module>admin-service</module>
     </modules>
 
     <dependencies>
