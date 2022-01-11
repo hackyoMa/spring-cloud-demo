@@ -2,9 +2,9 @@
 
 ## 组件
 
-基于Spring Boot 2.5.5和Spring Cloud 2020.0.4的Spring Cloud Demo，其中含有下列组件的样例：
+基于Spring Boot 2.6.2和Spring Cloud 2021.0.0的Spring Cloud Demo，其中含有下列组件的样例：
 > * Consul（自行安装，注册中心、配置中心）
-> > * docker run -d -p 8500:8500 -v $PWD/data/:/consul/data/ -e CONSUL_BIND_INTERFACE=eth0 --name=consul consul:1.10
+> > * docker run -d -p 8500:8500 -v $PWD/data/:/consul/data/ -e CONSUL_BIND_INTERFACE=eth0 --name=consul consul:1.11
 > * Zipkin（自行安装，服务链路追踪）
 > > * docker run -d -p 9411:9411 --name=zipkin hackyo/zipkin:2
 > * Sentinel（自行安装，流量防卫）
@@ -26,7 +26,6 @@
 > * Spring Cloud Sleuth监控服务的使用信息
 > * Zipkin监控服务间的调用信息
 > * Spring Boot Admin监控服务的运行状态和属性等相关信息
-> * 在网关处聚合所有服务的Swagger
 
 ------
 
@@ -38,7 +37,6 @@
 > * Zipkin信息地址：http://localhost:9411/zipkin
 > * Spring Boot Admin服务地址：http://localhost:18885
 > * Sentinel控制台（需要调用相关接口后才能在控制台看到数据）：http://localhost:9500
-> * Swagger UI：http://localhost:18884/swagger-ui/index.html
 
 ------
 
