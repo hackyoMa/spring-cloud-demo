@@ -1,8 +1,5 @@
 spring:
   cloud:
-    sentinel:
-      filter:
-        enabled: false
     gateway:
       discovery:
         locator:

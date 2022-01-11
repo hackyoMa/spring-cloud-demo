@@ -1,6 +1,6 @@
 server:
   port: 18883
-  shutdown: graceful
+  shutdown: GRACEFUL
 spring:
   application:
     name: consumer-service

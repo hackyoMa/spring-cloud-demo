@@ -1,6 +1,6 @@
 server:
   port: 18881
-  shutdown: graceful
+  shutdown: GRACEFUL
 spring:
   application:
     name: hi-service
