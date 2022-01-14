@@ -4,7 +4,7 @@
 
 基于Spring Boot 2.6.2和Spring Cloud 2021.0.0的Spring Cloud Demo，其中含有下列组件的样例：
 > * Consul（自行安装，注册中心、配置中心）
-> > * docker run -d -p 8500:8500 -v $PWD/data/:/consul/data/ -e CONSUL_BIND_INTERFACE=eth0 --name=consul consul:1.11
+> > * docker run -d -p 8500:8500 -v $PWD/data/:/consul/data/ $PWD/config/:/consul/config/ -e CONSUL_BIND_INTERFACE=eth0 --name=consul consul:1.11
 > * Zipkin（自行安装，服务链路追踪）
 > > * docker run -d -p 9411:9411 --name=zipkin hackyo/zipkin:2
 > * Sentinel（自行安装，流量防卫）
