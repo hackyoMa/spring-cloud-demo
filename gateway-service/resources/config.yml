@@ -5,5 +5,3 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-swagger:
-  exclude-services: consul, admin-service

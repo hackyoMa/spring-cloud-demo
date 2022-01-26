@@ -2,6 +2,6 @@ spring:
   boot:
     admin:
       discovery:
-        ignored-services: consul
+        ignored-services: consul, admin-service
   thymeleaf:
     check-template-location: false

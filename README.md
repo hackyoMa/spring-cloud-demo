@@ -1,50 +1,48 @@
-# Spring Cloud Demo
+## Spring Cloud Demo
 
-## 组件
+Spring Cloud Demo based on Spring Boot 2.6 and Spring Cloud 2021.0
 
-基于Spring Boot 2.6.2和Spring Cloud 2021.0.0的Spring Cloud Demo，其中含有下列组件的样例：
-> * Consul（自行安装，注册中心、配置中心）
+### Quick start
+
+> * Consul (registration center\configuration center)
 > > * docker run -d --name=consul -p 8500:8500 -v $PWD/data/:/consul/data/ \\  
-          -e 'CONSUL_LOCAL_CONFIG={"skip_leave_on_interrupt":true,"telemetry":{"disable_compat_1.9":true}}' \\  
-          consul:1.11 agent -server -ui -bootstrap -client='0.0.0.0'
-> * Zipkin（自行安装，服务链路追踪）
+      -e 'CONSUL_LOCAL_CONFIG={"skip_leave_on_interrupt":true,"telemetry":{"disable_compat_1.9":true}}' \\  
+      consul:1.11 agent -server -ui -bootstrap -client='0.0.0.0'
+> * Zipkin (service link tracking)
 > > * docker run -d -p 9411:9411 --name=zipkin hackyo/zipkin:2
-> * Sentinel（自行安装，流量防卫）
+> * Sentinel (traffic defense)
 > > * docker run -d -p 9500:8080 --name sentinel hackyo/sentinel:1.8
-> * RestTemplate（服务消费者）
-> * Spring Cloud Gateway（路由网关）
-> * Spring Boot Admin（服务监控中心）
+> * Service
+> > * run AdminServiceApplication/GatewayServiceApplication/UserServiceApplication
 
 ------
 
-## 组件说明
+### Component description
 
-> * 外部或内部非Spring Cloud项目统一通过API网关（Spring Cloud Gateway）来访问内部服务
-> * 网关接收到请求后，从注册中心（Consul）获取可用服务
-> * RestTemplate进行负载均衡后，分发到具体实例
-> * 所有流量均使用Sentinel进行控制
-> * 微服务之间通过RestTemplate进行通信
-> * Consul对服务配置进行统一管理
-> * Spring Cloud Sleuth监控服务的使用信息
-> * Zipkin监控服务间的调用信息
-> * Spring Boot Admin监控服务的运行状态和属性等相关信息
-
-------
-
-## 相关地址
-
-> * 直接消费服务：http://localhost:18881/hi?name=666
-> * 通过RestTemplate消费服务：http://localhost:18883/hi?name=666
-> * 通过Spring Cloud Gateway消费：http://localhost:18884/hi-service/hi?name=666
-> * Zipkin信息地址：http://localhost:9411/zipkin
-> * Spring Boot Admin服务地址：http://localhost:18885
-> * Sentinel控制台（需要调用相关接口后才能在控制台看到数据）：http://localhost:9500
+> * External requests uniformly access internal services through Spring Cloud Gateway
+> * After the gateway receives the request, it obtains the available services from Consul
+> * The gateway performs user authentication, then forwards the user information to the backend, and re-encapsulates the return value from the backend
+> * All service traffic is controlled using Sentinel
+> * Communication between microservices through RestTemplate
+> * Consul for unified management of service configuration
+> * Usage information of Spring Cloud Sleuth monitoring service
+> * Zipkin monitors call information between services
+> * Spring Boot Admin monitors the running status and properties of services and other related information
+> * The service integrates unified exception management and authorization authentication
 
 ------
 
-## 配置中心配置地址
+### Related address
 
-指的是各服务在Consul中Key/Value的Key值，配置示例在config.yml和project/resources/config.yml中
-> * application（全局配置）：config/application/data
-> * admin-service：config/admin-service/data
-> * gateway-service：config/gateway-service/data
+> * request: http://localhost:18881/hi?name=666
+> * request via gateway: http://localhost:18884/hi-service/hi?name=666
+> * consul: http://localhost:8500
+> * zipkin: http://localhost:9411/zipkin
+> * spring boot admin: http://localhost:18885
+> * sentinel (please request first): http://localhost:9500
+
+------
+
+### Consul config key/value
+> * ./config.yml: config/application/data
+> * ./${service-name}/resources/config.yml: config/${service-name}/data

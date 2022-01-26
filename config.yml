@@ -1,4 +1,35 @@
 spring:
+  messages:
+    basename: i18n/messages
+    fallback-to-system-locale: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      filters: stat
+      maxActive: 20
+      initialSize: 1
+      maxWait: 6000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
+      asyncInit: true
+      validation-query: select 1
+      web-stat-filter:
+        enabled: true
+        profile-enable: true
+      stat-view-servlet:
+        enabled: true
+        login-username:
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    open-in-view: false
   sleuth:
     sampler:
       probability: 1.0
@@ -8,6 +39,8 @@ spring:
         dashboard: localhost:9500
   zipkin:
     base-url: http://localhost:9411
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.xml
 management:
   endpoints:
     web:
@@ -16,3 +49,16 @@ management:
   endpoint:
     health:
       show-details: always
+security:
+  global-whitelist:
+    ALL:
+      - /druid/**
+      - /actuator/**
+  whitelist:
+    user-service:
+      POST:
+        - /user/_login
+  internal-whitelist:
+    user-service:
+      GET:
+        - /user/all_info

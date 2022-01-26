@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>io.github.hackyoma</groupId>
-        <artifactId>spring-cloud-demo-parent</artifactId>
+        <groupId>io.github.hackyoma.springclouddemo</groupId>
+        <artifactId>spring-cloud-demo</artifactId>
         <version>1.0.0</version>
     </parent>
 

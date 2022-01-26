@@ -9,28 +9,17 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>gateway-service</artifactId>
-    <name>gateway-service</name>
-    <description>Gateway Service</description>
+    <artifactId>user-service</artifactId>
+    <name>user-service</name>
+    <description>User Service</description>
     <packaging>jar</packaging>
 
     <dependencies>
 
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>io.github.hackyoma.springclouddemo</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>service-common</artifactId>
             <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.projectreactor</groupId>
-            <artifactId>reactor-test</artifactId>
-            <scope>test</scope>
         </dependency>
 
     </dependencies>
