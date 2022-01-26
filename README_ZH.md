@@ -28,18 +28,18 @@
 > * Spring Cloud Sleuth监控服务的使用信息
 > * Zipkin监控服务间的调用信息
 > * Spring Boot Admin监控服务的运行状态和属性等相关信息
-> * 服务集成了统一异常管理和权限认证
+> * 服务集成了统一异常管理、权限认证、i18n、liquibase
 
 ------
 
 ### 相关地址
 
-> * 直接请求: http://localhost:18881/hi?name=666
-> * 通过gateway请求: http://localhost:18884/hi-service/hi?name=666
+> * 直接请求: http://localhost:18881/user/_login (请求体为username和password，默认都是admin)
+> * 通过gateway请求: http://localhost:18884/user-service/user/_login (请求体同上)
 > * consul: http://localhost:8500
 > * zipkin: http://localhost:9411/zipkin
 > * spring boot admin: http://localhost:18885
-> * sentinel (请求后才能在控制台看到服务): http://localhost:9500
+> * sentinel (请求后才能在控制台看到服务，sentinel/sentinel): http://localhost:9500
 
 ------
 

@@ -28,18 +28,18 @@ Spring Cloud Demo based on Spring Boot 2.6 and Spring Cloud 2021.0
 > * Usage information of Spring Cloud Sleuth monitoring service
 > * Zipkin monitors call information between services
 > * Spring Boot Admin monitors the running status and properties of services and other related information
-> * The service integrates unified exception management and authorization authentication
+> * The service integrates unified exception management, authority authentication, i18n, liquibase
 
 ------
 
 ### Related address
 
-> * request: http://localhost:18881/hi?name=666
-> * request via gateway: http://localhost:18884/hi-service/hi?name=666
+> * request: http://localhost:18881/user/_login (the content of body is username and password，the default is admin)
+> * request via gateway: http://localhost:18884/user-service/user/_login (body as above)
 > * consul: http://localhost:8500
 > * zipkin: http://localhost:9411/zipkin
 > * spring boot admin: http://localhost:18885
-> * sentinel (please request first): http://localhost:9500
+> * sentinel (please request first, sentinel/sentinel): http://localhost:9500
 
 ------
 
