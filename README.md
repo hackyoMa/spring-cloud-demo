@@ -1,5 +1,7 @@
 ## Spring Cloud Demo
 
+English | [中文](README_ZH.md)
+
 Spring Cloud Demo based on Spring Boot 2.6 and Spring Cloud 2021.0
 
 ### Quick start

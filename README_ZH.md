@@ -1,5 +1,7 @@
 ## Spring Cloud Demo
 
+[English](README.md) | 中文
+
 基于Spring Boot 2.6和Spring Cloud 2021.0的Spring Cloud Demo
 
 ### 快速开始
